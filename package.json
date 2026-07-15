@@ -1,0 +1,9 @@
+{
+  "name": "graceelectric",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "node demo/build.js",
+    "dev": "npx serve -p 3001"
+  }
+}

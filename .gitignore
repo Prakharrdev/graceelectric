@@ -1,0 +1,8 @@
+node_modules/
+demo/index.html
+.DS_Store
+/tmp/
+.playwright-mcp/
+Attachments-Photos.zip
+hero.png
+image.png
