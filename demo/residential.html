@@ -106,7 +106,7 @@
     <!-- Mobile Topbar -->
     <div class="mobile-topbar">
       <a href="tel:12319444519" class="topbar-phone-icon" aria-label="Call Us"><i class="bi bi-telephone-fill"></i></a>
-      <a href="/" class="mobile-topbar-logo-link">
+      <a href="/demo/" class="mobile-topbar-logo-link">
         <img src="/demo/images/logo.webp" alt="Grace Electric" class="mobile-topbar-logo" />
       </a>
       <button class="hamburger" id="hamburger" aria-label="Open menu">
@@ -118,7 +118,7 @@
 
     <div class="mobile-drawer" id="drawer">
       <div class="drawer-header">
-        <a href="/" class="drawer-logo-link">
+        <a href="/demo/" class="drawer-logo-link">
           <img src="/demo/images/logo.webp" alt="Grace Electric" class="drawer-logo-img" />
         </a>
         <button class="close-btn" id="closeBtn" aria-label="Close">
@@ -143,7 +143,7 @@
     <nav class="main-nav">
       <ul>
         <li class="nav-logo">
-          <a href="/" class="nav-logo-link">
+          <a href="/demo/" class="nav-logo-link">
             <img src="/demo/images/logo.webp" alt="Grace Electric" class="nav-logo-img" />
           </a>
         </li>
@@ -169,14 +169,17 @@
     <div class="row align-items-center gx-4">
       
       <!-- Left Content -->
-      <div class="col-lg-4 col-12 order-2 order-lg-1">
+      <div class="col-lg-4 col-12">
         <div class="hero-content ps-lg-4">
-          <nav aria-label="breadcrumb">
+          <nav aria-label="breadcrumb" class="pt-3 pt-lg-0">
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="/demo/" class="text-secondary text-decoration-none">Home</a></li>
               <li class="breadcrumb-item active text-accent fw-bold" aria-current="page">Residential</li>
             </ol>
           </nav>
+          
+          <!-- Mobile Image -->
+          <img src="/demo/images/residential-hero-image.webp" class="img-fluid rounded-4 mb-4 d-block d-lg-none shadow-sm" alt="Residential Electrical Services" style="width: 100%; max-height: 400px; object-fit: cover; object-position: center top;" />
           
           <h1 class="hero-title mb-3 text-dark fw-bold">
             Residential Electrical <br/><span class="text-accent">Services</span>
@@ -193,7 +196,7 @@
       </div>
 
       <!-- Right Content -->
-      <div class="col-lg-8 col-12 order-1 order-lg-2 mb-4 mb-lg-0 mt-4 mt-lg-0">
+      <div class="col-lg-8 col-12 d-none d-lg-block">
         <div class="hero-image-wrapper pe-lg-3">
           <img src="/demo/images/residential-hero-image.webp" alt="Residential Electrical Services" class="img-fluid residential-hero-img">
         </div>
