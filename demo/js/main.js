@@ -247,4 +247,36 @@
   window.addEventListener('scroll', toggleNavScroll);
   toggleNavScroll();
 
+  /* ── Form Submission ── */
+  document.querySelectorAll('#appointmentForm').forEach(form => {
+    form.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const btn = this.querySelector('button[type="submit"]');
+      const orig = btn.textContent;
+      btn.disabled = true;
+      btn.textContent = 'Sending...';
+
+      try {
+        const fd = new FormData(this);
+        const data = Object.fromEntries(fd.entries());
+        const res = await fetch(this.action, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data),
+        });
+        const json = await res.json();
+        if (json.success) {
+          this.innerHTML = '<div style="text-align:center;padding:24px;"><h4 style="color:#F4B400;margin:0 0 8px;">Thank You!</h4><p style="color:#fff;margin:0;">Your enquiry has been sent. We\'ll get back to you shortly.</p></div>';
+        } else {
+          alert('Failed to send. Please try again or call (231) 944-4519.');
+        }
+      } catch (err) {
+        alert('Network error. Please try again or call (231) 944-4519.');
+      } finally {
+        btn.disabled = false;
+        btn.textContent = orig;
+      }
+    });
+  });
+
 })();
