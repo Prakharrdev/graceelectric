@@ -180,4 +180,16 @@
     startAutoPlay();
   })();
 
+  /* ── Sticky Navigation ── */
+  const mainNav = document.querySelector('.main-nav');
+  if (mainNav) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 20) {
+        mainNav.classList.add('navbar-scrolled');
+      } else {
+        mainNav.classList.remove('navbar-scrolled');
+      }
+    });
+  }
+
 })();
