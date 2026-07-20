@@ -84,10 +84,7 @@
 
     <!-- Mobile Topbar -->
     <div class="mobile-topbar">
-      <a href="tel:12319444519" class="topbar-phone">
-        <i class="bi bi-telephone-fill"></i>
-        (231) 944-4519
-      </a>
+      <a href="tel:12319444519" class="topbar-phone-icon" aria-label="Call Us"><i class="bi bi-telephone-fill"></i></a>
       <a href="/" class="mobile-topbar-logo-link">
         <img src="/demo/images/logo.webp" alt="Grace Electric" class="mobile-topbar-logo" />
       </a>
@@ -151,7 +148,7 @@
     <div class="row align-items-center gx-4">
       
       <!-- Left Content -->
-      <div class="col-lg-5 col-12 order-2 order-lg-1">
+      <div class="col-lg-4 col-12 order-2 order-lg-1">
         <div class="hero-content ps-lg-4">
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
@@ -175,9 +172,9 @@
       </div>
 
       <!-- Right Content -->
-      <div class="col-lg-7 col-12 order-1 order-lg-2 mb-4 mb-lg-0 mt-4 mt-lg-0">
+      <div class="col-lg-8 col-12 order-1 order-lg-2 mb-4 mb-lg-0 mt-4 mt-lg-0">
         <div class="hero-image-wrapper pe-lg-3">
-          <img src="/demo/images/about-img.webp" alt="Grace Electric Office" class="img-fluid contact-hero-img">
+          <img src="/demo/images/contact-hero-image.webp" alt="Contact Grace Electric" class="img-fluid contact-hero-img">
         </div>
       </div>
 
@@ -262,7 +259,7 @@
                   <div class="text-center mb-4">
                     <span class="appointment-pill d-inline-block">Appointment Now</span>
                   </div>
-                  <form id="appointmentForm" action="#" method="POST">
+                  <form id="appointmentForm" action="/api/send-enquiry" method="POST">
                     <div class="row g-3">
                       <div class="col-sm-6">
                         <input class="form-control rounded-input py-2" placeholder="First Name *" aria-label="First Name" name="firstName" required />

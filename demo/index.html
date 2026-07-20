@@ -105,12 +105,10 @@
 
     <!-- Mobile Topbar -->
     <div class="mobile-topbar">
-      <a href="tel:12319444519" class="topbar-phone">
-        <i class="bi bi-telephone-fill"></i>
-        (231) 944-4519
+      <a href="tel:12319444519" class="topbar-phone-icon" aria-label="Call Us"><i class="bi bi-telephone-fill"></i></a>
+      <a href="/" class="mobile-topbar-logo-link">
+        <img src="/demo/images/logo.webp" alt="Grace Electric" class="mobile-topbar-logo" />
       </a>
-      <!-- Mobile Logo removed on home page because it's in the hero section -->
-      <div style="width: 40px; display: none;"></div>
       <button class="hamburger" id="hamburger" aria-label="Open menu">
         <i id="hamIcon" class="bi bi-list"></i>
       </button>
@@ -144,8 +142,7 @@
     <!-- Main Nav -->
     <nav class="main-nav">
       <ul>
-        <li class="nav-logo">
-          <!-- Main Nav Logo removed on home page because it's in the hero section -->
+        <li class="nav-logo" aria-hidden="true">
         </li>
         <li class="nav-links-group">
           <a href="/demo/residential.html" class="nav-btn">Residential</a>
@@ -202,7 +199,7 @@
                   <div class="text-center mb-3">
                     <span class="appointment-pill d-inline-block">Appointment Now</span>
                   </div>
-                  <form id="appointmentForm" action="#" method="POST">
+                  <form id="appointmentForm" action="/api/send-enquiry" method="POST">
                     <div class="row g-2">
                       <div class="col-6">
                         <input class="form-control rounded-input" placeholder="First Name *" aria-label="First Name" name="firstName" required />

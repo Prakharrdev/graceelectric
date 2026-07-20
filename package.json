@@ -4,12 +4,17 @@
   "private": true,
   "scripts": {
     "build": "node demo/build.js",
-    "dev": "npm run build && (chokidar 'demo/src/**/*.html' 'demo/css/**/*.css' -c 'npm run build' & browser-sync start --server --files 'demo/**/*.html, demo/**/*.css, demo/**/*.js' --port 3000)",
-    "start": "npm run dev"
+    "server": "node server.js",
+    "start": "npm run build && (node server.js & browser-sync start --proxy 'localhost:3001' --files 'demo/**/*.html, demo/**/*.css, demo/**/*.js' --port 3000 --no-open)",
+    "dev": "npm run start"
   },
   "devDependencies": {
     "browser-sync": "^3.0.0",
     "chokidar-cli": "^3.0.0",
     "serve": "^14.2.0"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "resend": "^6.17.2"
   }
 }
