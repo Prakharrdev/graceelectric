@@ -229,19 +229,25 @@
   /* ── Sticky Navigation ── */
   const mainNav = document.querySelector('.main-nav');
   const mobileBar = document.querySelector('.mobile-topbar');
-  const navLogos = document.querySelectorAll('.nav-logo-img, .mobile-topbar-logo, .drawer-logo-img');
+  const desktopLogos = document.querySelectorAll('.nav-logo-img, .drawer-logo-img');
+  const mobileLogo = document.querySelector('.mobile-topbar-logo');
 
-  const LOGO_DEFAULT = '/demo/images/logo.webp';
-  const LOGO_SCROLLED = '/demo/images/logo-nav.webp';
+  const LOGO_DESKTOP_DEFAULT = '/demo/images/logo.webp';
+  const LOGO_DESKTOP_SCROLLED = '/demo/images/logo-nav.webp';
+  const LOGO_MOBILE_DEFAULT = '/demo/images/logo-nav-light.svg';
+  const LOGO_MOBILE_SCROLLED = '/demo/images/logo-nav-dark.svg';
 
   function toggleNavScroll() {
     const threshold = 50;
     const scrolled = window.scrollY > threshold;
     if (mainNav) mainNav.classList.toggle('navbar-scrolled', scrolled);
     if (mobileBar) mobileBar.classList.toggle('navbar-scrolled', scrolled);
-    navLogos.forEach(img => {
-      img.src = scrolled ? LOGO_SCROLLED : LOGO_DEFAULT;
+    desktopLogos.forEach(img => {
+      img.src = scrolled ? LOGO_DESKTOP_SCROLLED : LOGO_DESKTOP_DEFAULT;
     });
+    if (mobileLogo) {
+      mobileLogo.src = scrolled ? LOGO_MOBILE_SCROLLED : LOGO_MOBILE_DEFAULT;
+    }
   }
 
   window.addEventListener('scroll', toggleNavScroll);

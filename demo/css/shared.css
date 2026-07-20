@@ -208,16 +208,8 @@ a { text-decoration: none; }
 
 .mobile-topbar-logo {
   height: 45px;
-  aspect-ratio: 1549 / 775;
+  width: auto;
   display: inline-block;
-  background-color: #000; /* Black for light topbar */
-  -webkit-mask: url('/demo/images/logo-nav.svg') no-repeat center;
-  -webkit-mask-size: contain;
-  mask: url('/demo/images/logo-nav.svg') no-repeat center;
-  mask-size: contain;
-}
-.mobile-topbar.navbar-scrolled .mobile-topbar-logo {
-  background-color: #fff; /* White for dark topbar */
 }
 
 .topbar-phone-icon { 
