@@ -229,12 +229,19 @@
   /* ── Sticky Navigation ── */
   const mainNav = document.querySelector('.main-nav');
   const mobileBar = document.querySelector('.mobile-topbar');
+  const navLogos = document.querySelectorAll('.nav-logo-img, .mobile-topbar-logo, .drawer-logo-img');
+
+  const LOGO_DEFAULT = '/demo/images/logo.webp';
+  const LOGO_SCROLLED = '/demo/images/logo-nav.webp';
 
   function toggleNavScroll() {
     const threshold = 50;
     const scrolled = window.scrollY > threshold;
     if (mainNav) mainNav.classList.toggle('navbar-scrolled', scrolled);
     if (mobileBar) mobileBar.classList.toggle('navbar-scrolled', scrolled);
+    navLogos.forEach(img => {
+      img.src = scrolled ? LOGO_SCROLLED : LOGO_DEFAULT;
+    });
   }
 
   window.addEventListener('scroll', toggleNavScroll);
