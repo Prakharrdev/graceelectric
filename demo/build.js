@@ -29,6 +29,16 @@ const pages = {
     '_footer.html',
     '_scripts.html',
   ],
+  'contact.html': [
+    '_head-contact.html',
+    '_nav.html',
+    '_hero-contact.html',
+    '_content-contact.html',
+    '_map.html',
+    '_serving.html',
+    '_footer.html',
+    '_scripts.html',
+  ],
 };
 
 for (const [filename, partials] of Object.entries(pages)) {
