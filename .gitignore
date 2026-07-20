@@ -6,3 +6,10 @@ demo/index.html
 Attachments-Photos.zip
 hero.png
 image.png
+
+# Playwright screenshots & snapshots
+homepage-hero.png
+homepage-snapshot.yml
+mobile-homepage.png
+mobile-homepage2.png
+mobile-homepage-fixed.png

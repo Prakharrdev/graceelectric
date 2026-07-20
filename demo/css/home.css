@@ -36,8 +36,11 @@
 }
 
 @media (max-width: 767.98px) {
-  .logo-wrapper     { justify-content: center; margin-top: 0; margin-left: 0; margin-bottom: 370px; }
-  .logo             { width: 160px; height: 160px; }
+  .hero-bg          { background-position: center top; }
+  .hero-section     { min-height: 100svh; }
+  .hero-inner       { padding-top: calc(var(--mobile-nav-height) + 12px); }
+  .logo-wrapper     { justify-content: center; margin-top: 0; margin-left: 0; margin-bottom: 16px; }
+  .logo             { width: 120px; height: 120px; }
   .hero-title       { text-align: left; width: 100%; }
   .right-side-section { text-align: left; padding-left: 16px !important; padding-right: 16px !important; margin-left: 0 !important; }
   .highlight-pill            { white-space: normal; line-height: 1.4; font-size: 1rem; }
