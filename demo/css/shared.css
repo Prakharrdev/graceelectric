@@ -153,6 +153,11 @@ a { text-decoration: none; }
 .nav-btn.active {
   font-weight: 600;
   color: #F4B400 !important;
+  text-shadow: 0 0 20px rgba(244,180,0,.5), 0 0 40px rgba(244,180,0,.25);
+}
+
+.nav-btn.active::after {
+  box-shadow: 0 0 20px rgba(244,180,0,.8), 0 0 40px rgba(244,180,0,.4);
 }
 
 .nav-phone-link {

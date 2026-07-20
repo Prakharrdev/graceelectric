@@ -180,6 +180,52 @@
     startAutoPlay();
   })();
 
+  /* ── Active Section Tracking ── */
+  (function() {
+    const currentPath = window.location.pathname.replace(/\/+$/, '') || '/';
+
+    const navBtns = document.querySelectorAll('.nav-btn');
+    navBtns.forEach(btn => {
+      const href = btn.getAttribute('href');
+      if (!href) return;
+      if (href.startsWith('#')) return;
+      const btnPath = href.replace(/\/+$/, '');
+      if (btnPath === currentPath) {
+        btn.classList.add('active');
+      }
+    });
+
+    const anchorBtns = document.querySelectorAll('.nav-btn[href^="#"]');
+    if (!anchorBtns.length) return;
+
+    const sectionMap = new Map();
+    anchorBtns.forEach(btn => {
+      const id = btn.getAttribute('href').slice(1);
+      if (id) sectionMap.set(id, btn);
+    });
+
+    const observer = new IntersectionObserver(entries => {
+      let anyVisible = false;
+      entries.forEach(entry => {
+        const btn = sectionMap.get(entry.target.id);
+        if (!btn) return;
+        if (entry.isIntersecting) {
+          anchorBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          anyVisible = true;
+        }
+      });
+      if (!anyVisible) {
+        anchorBtns.forEach(b => b.classList.remove('active'));
+      }
+    }, { rootMargin: '-30% 0px -30% 0px' });
+
+    sectionMap.forEach((_, id) => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+  })();
+
   /* ── Sticky Navigation ── */
   const mainNav = document.querySelector('.main-nav');
   const mobileBar = document.querySelector('.mobile-topbar');
