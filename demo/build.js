@@ -29,6 +29,7 @@ const pages = {
     '_about.html',
     '_expertise.html',
     '_reviews.html',
+    '_map.html',
     '_footer.html',
     '_scripts.html',
   ],
