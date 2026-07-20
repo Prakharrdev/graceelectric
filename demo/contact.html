@@ -24,6 +24,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="/demo/css/shared.css" />
+    <link rel="stylesheet" href="/demo/css/home.css" />
     <link rel="stylesheet" href="/demo/css/contact.css" />
 
     <link rel="icon" type="image/x-icon" href="/demo/images/favicon.ico">
@@ -137,101 +138,54 @@
 
     <main>
 
-      <section class="hero-section" id="home">
-        <div class="hero-bg"></div>
-        <div class="container-fluid hero-inner">
-          <div class="row align-items-start gx-2">
+<section class="residential-hero" id="home">
+  <div class="container-fluid hero-inner">
+    <div class="row align-items-center gx-4">
+      
+      <!-- Left Content -->
+      <div class="col-lg-5 col-12 order-2 order-lg-1">
+        <div class="hero-content ps-lg-4">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="/demo/" class="text-secondary text-decoration-none">Home</a></li>
+              <li class="breadcrumb-item active text-accent fw-bold" aria-current="page">Contact Us</li>
+            </ol>
+          </nav>
+          
+          <h1 class="hero-title mb-3 text-dark fw-bold">
+            Get In <span class="text-accent">Touch</span>
+          </h1>
 
-            <div class="col-md-8 col-12">
-              <div class="right-side-section me-md-5 me-0 ms-md-4 ms-0 px-3 px-md-0">
+          <p class="hero-description mb-4 text-secondary fs-5">
+            Ready to start your project? Call us, email us, or fill out the form below and we'll get back to you the same day.
+          </p>
 
-                <div class="logo-wrapper mt-5">
-                  <a href="/demo/">
-                    <div class="logo" style="background-image: url('/demo/images/logo.webp');"></div>
-                  </a>
-                </div>
-
-                <h1 class="hero-title mb-3">
-                  <span class="hero-title-text">
-                    Get In <span>Touch</span>
-                  </span>
-                </h1>
-
-                <p class="hero-subtitle">
-                  Ready to start your project? Call us, email us, or fill out the form and we'll get back to you the same day.
-                </p>
-
-              </div>
-            </div>
-
-            <div class="col-md-4 col-12 mt-4 mt-md-0">
-                <div class="form-container mt-5" id="contact">
-                  <div class="appointment-card p-4">
-                  <p class="text-center mb-1 fw-semibold">Book Your</p>
-                  <div class="text-center mb-3">
-                    <span class="appointment-pill d-inline-block">Appointment Now</span>
-                  </div>
-                  <form id="appointmentForm" action="#" method="POST">
-                    <div class="row g-2">
-                      <div class="col-6">
-                        <input class="form-control rounded-input" placeholder="First Name *" aria-label="First Name" name="firstName" required />
-                      </div>
-                      <div class="col-6">
-                        <input class="form-control rounded-input" placeholder="Last Name *" aria-label="Last Name" name="lastName" required />
-                      </div>
-                    </div>
-                    <div class="row g-2 mt-2">
-                      <div class="col-6">
-                        <input class="form-control rounded-input" placeholder="Phone Number *" aria-label="Phone Number" name="phone" type="tel" required />
-                      </div>
-                      <div class="col-6">
-                        <input type="email" class="form-control rounded-input" placeholder="Email Address *" aria-label="Email Address" name="email" required />
-                      </div>
-                    </div>
-                    <div class="mt-2">
-                      <input class="form-control rounded-input" placeholder="Zip Code *" aria-label="Zip Code" name="zip" required />
-                    </div>
-                    <div class="mt-2">
-                      <select class="form-select rounded-input" aria-label="How Did You Hear About Us?" name="referral">
-                        <option value="" selected disabled>How Did You Hear About Us?</option>
-                        <option value="facebook">Facebook</option>
-                        <option value="google-search">Google Search</option>
-                        <option value="google-ad">Google Ad</option>
-                        <option value="referral">Referral</option>
-                        <option value="nextdoor">Nextdoor</option>
-                        <option value="other">Other</option>
-                      </select>
-                    </div>
-                    <div class="mt-2">
-                      <textarea class="form-control rounded-input" rows="4" placeholder="How Can We Help You?" aria-label="How Can We Help You?" name="message"></textarea>
-                    </div>
-                    <div class="mt-2">
-                      <select class="form-select rounded-input" aria-label="Book An Appointment?" name="appointment">
-                        <option value="" selected disabled>Book An Appointment?</option>
-                        <option value="yes">Yes</option>
-                        <option value="no">No (Reach Out To Schedule)</option>
-                      </select>
-                    </div>
-                    <div class="mt-3">
-                      <button type="submit" class="btn btn-danger w-100 btn-cta">START BOOKING NOW</button>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-
-          </div>
+          <a href="#contact" class="btn btn-cta d-inline-flex align-items-center gap-2 text-dark fs-6 py-3 px-4">
+            SEND A MESSAGE <i class="bi bi-arrow-down"></i>
+          </a>
         </div>
-      </section>
+      </div>
 
-      <section class="contact-details-section py-5">
+      <!-- Right Content -->
+      <div class="col-lg-7 col-12 order-1 order-lg-2 mb-4 mb-lg-0 mt-4 mt-lg-0">
+        <div class="hero-image-wrapper pe-lg-3">
+          <img src="/demo/images/about-img.webp" alt="Grace Electric Office" class="img-fluid residential-hero-img">
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+      <section class="contact-details-section py-5" id="contact">
         <div class="container">
           <div class="row g-5">
 
+            <!-- Left Column: Contact Info & Areas -->
             <div class="col-lg-6">
               <h2 class="mb-4 fw-bold">Contact Information</h2>
 
-              <div class="contact-info-card mb-4">
+              <div class="contact-info-card mb-5">
                 <div class="contact-info-item">
                   <div class="contact-icon"><i class="bi bi-telephone-fill"></i></div>
                   <div>
@@ -247,13 +201,6 @@
                   </div>
                 </div>
                 <div class="contact-info-item">
-                  <div class="contact-icon"><i class="bi bi-geo-alt-fill"></i></div>
-                  <div>
-                    <h5>Office Address</h5>
-                    <p class="mb-0">11307 N 17 Rd, Buckley, MI 49620</p>
-                  </div>
-                </div>
-                <div class="contact-info-item">
                   <div class="contact-icon"><i class="bi bi-clock-fill"></i></div>
                   <div>
                     <h5>Business Hours</h5>
@@ -263,17 +210,6 @@
                 </div>
               </div>
 
-              <div class="d-flex gap-3 mt-4">
-                <a href="https://google.com" target="_blank" rel="noopener noreferrer" class="contact-social-btn" aria-label="Review us on Google">
-                  <i class="bi bi-google"></i>
-                </a>
-                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="contact-social-btn" aria-label="Review us on Facebook">
-                  <i class="bi bi-facebook"></i>
-                </a>
-              </div>
-            </div>
-
-            <div class="col-lg-6">
               <h2 class="mb-4 fw-bold">Areas We Serve</h2>
               <div class="contact-areas-grid">
                 <div class="contact-area-item">Traverse City</div>
@@ -299,11 +235,366 @@
                 <div class="contact-area-item">Lake Ann</div>
                 <div class="contact-area-item">Torch Lake</div>
               </div>
+              
+              <div class="d-flex gap-3 mt-5">
+                <a href="https://google.com" target="_blank" rel="noopener noreferrer" class="contact-social-btn" aria-label="Review us on Google">
+                  <i class="bi bi-google"></i>
+                </a>
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="contact-social-btn" aria-label="Review us on Facebook">
+                  <i class="bi bi-facebook"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Right Column: Form -->
+            <div class="col-lg-6">
+              <div class="form-container">
+                <div class="appointment-card p-4 w-100">
+                  <p class="text-center mb-1 fw-semibold">Book Your</p>
+                  <div class="text-center mb-4">
+                    <span class="appointment-pill d-inline-block">Appointment Now</span>
+                  </div>
+                  <form id="appointmentForm" action="#" method="POST">
+                    <div class="row g-3">
+                      <div class="col-sm-6">
+                        <input class="form-control rounded-input py-2" placeholder="First Name *" aria-label="First Name" name="firstName" required />
+                      </div>
+                      <div class="col-sm-6">
+                        <input class="form-control rounded-input py-2" placeholder="Last Name *" aria-label="Last Name" name="lastName" required />
+                      </div>
+                    </div>
+                    <div class="row g-3 mt-1">
+                      <div class="col-sm-6">
+                        <input class="form-control rounded-input py-2" placeholder="Phone Number *" aria-label="Phone Number" name="phone" type="tel" required />
+                      </div>
+                      <div class="col-sm-6">
+                        <input type="email" class="form-control rounded-input py-2" placeholder="Email Address *" aria-label="Email Address" name="email" required />
+                      </div>
+                    </div>
+                    <div class="mt-3">
+                      <input class="form-control rounded-input py-2" placeholder="Zip Code *" aria-label="Zip Code" name="zip" required />
+                    </div>
+                    <div class="mt-3">
+                      <select class="form-select rounded-input py-2" aria-label="How Did You Hear About Us?" name="referral">
+                        <option value="" selected disabled>How Did You Hear About Us?</option>
+                        <option value="facebook">Facebook</option>
+                        <option value="google-search">Google Search</option>
+                        <option value="google-ad">Google Ad</option>
+                        <option value="referral">Referral</option>
+                        <option value="nextdoor">Nextdoor</option>
+                        <option value="other">Other</option>
+                      </select>
+                    </div>
+                    <div class="mt-3">
+                      <textarea class="form-control rounded-input py-2" rows="4" placeholder="How Can We Help You?" aria-label="How Can We Help You?" name="message"></textarea>
+                    </div>
+                    <div class="mt-3">
+                      <select class="form-select rounded-input py-2" aria-label="Book An Appointment?" name="appointment">
+                        <option value="" selected disabled>Book An Appointment?</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No (Reach Out To Schedule)</option>
+                      </select>
+                    </div>
+                    <div class="mt-4">
+                      <button type="submit" class="btn btn-danger w-100 btn-cta py-3">START BOOKING NOW</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
             </div>
 
           </div>
         </div>
       </section>
+
+      <!-- ═══════════════════════════ ABOUT / COMPANY ═══════════════════════════ -->
+      <section class="company-section overflow-hidden" id="about">
+        <div class="container-fluid p-0">
+          <div class="row g-0" style="position: relative;">
+
+            <div class="col-lg-5 company-img-col"></div>
+
+            <div class="col-lg-7 offset-lg-5 about-content-bg py-5 px-4 px-lg-5 d-flex align-items-center">
+              <div class="about-card py-4">
+                <h2 class="section-title mb-4">
+                  Michigan Electrician <br>
+                  With A Reputation <span class="trust-pill">You Can Trust.</span>
+                </h2>
+
+                <div class="content-text opacity-90">
+                  <p>Finding an electrician you can rely on shouldn't be a gamble. Too many homeowners have stories about shoddy wiring, missed appointments, and shockingly high bills.</p>
+                  <p>Grace Electric is different. We're the <strong>polar opposite</strong>.</p>
+                  <p>We're not a national electrical conglomerate that treats you like a number. We're a local, family-owned Northern Michigan business that takes pride in every outlet, panel, and fixture we install. <strong>Licensed. Insured. Bonded. And built on faith.</strong></p>
+                  <p>It's why we're passionate about doing every job the RIGHT WAY — code-compliant wiring, premium materials, and honest upfront pricing. PERIOD.</p>
+                  <p>But don't take our word for it. Here's proof we're the local electrician you can TRUST:</p>
+                </div>
+
+                <div class="row text-center mt-5 g-4 justify-content-center">
+                  <div class="col-6 col-md-3">
+                    <div class="stat-container">
+                      <div class="stat-circle">25+</div>
+                      <div class="stat-label">Years Serving <br> Northern Michigan</div>
+                    </div>
+                  </div>
+                  <div class="col-6 col-md-3">
+                    <div class="stat-container">
+                      <div class="stat-circle">500+</div>
+                      <div class="stat-label">5-Star <br> Online Reviews</div>
+                    </div>
+                  </div>
+                  <div class="col-6 col-md-3">
+                    <div class="stat-container">
+                      <div class="stat-circle">3K+</div>
+                      <div class="stat-label">Projects <br> Completed</div>
+                    </div>
+                  </div>
+                  <div class="col-6 col-md-3">
+                    <div class="stat-container">
+                      <div class="stat-circle">A+</div>
+                      <div class="stat-label">Better Business <br> Bureau Rating</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mt-5 d-flex flex-wrap align-items-center gap-4">
+                  <a href="#" class="btn btn-contact-custom">
+                    CONTACT US <span class="ms-2">→</span>
+                  </a>
+                  <span class="fs-5 text-navy">or Call <strong style="color:var(--color-accent);">(231) 944-4519</strong></span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══════════════════════════ OUR EXPERTISE ═══════════════════════════ -->
+      <section class="section-expertise py-5" id="services">
+        <div class="container">
+          <h2 class="mb-5 fw-bold text-center">Our Expertise</h2>
+          <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+              <a href="#" class="nav-link">
+                <div class="card">
+                  <div class="card-img-container">
+                    <img src="/demo/images/expertise/residential.webp" class="card-img-top" alt="Residential Electrical">
+                  </div>
+                  <div class="card-body text-center">
+                    <p class="card-title mb-0">Residential</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col">
+              <a href="#" class="nav-link">
+                <div class="card">
+                  <div class="card-img-container">
+                    <img src="/demo/images/expertise/commercial.webp" class="card-img-top" alt="Commercial Electrical">
+                  </div>
+                  <div class="card-body text-center">
+                    <p class="card-title mb-0">Commercial</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col">
+              <a href="#" class="nav-link">
+                <div class="card">
+                  <div class="card-img-container">
+                    <img src="/demo/images/expertise/lighting.webp" class="card-img-top" alt="Lighting & Fixtures">
+                  </div>
+                  <div class="card-body text-center">
+                    <p class="card-title mb-0">Lighting & Fixtures</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col">
+              <a href="#" class="nav-link">
+                <div class="card">
+                  <div class="card-img-container">
+                    <img src="/demo/images/expertise/smart-home.webp" class="card-img-top" alt="Smart Home">
+                  </div>
+                  <div class="card-body text-center">
+                    <p class="card-title mb-0">Smart Home</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col">
+              <a href="#" class="nav-link">
+                <div class="card">
+                  <div class="card-img-container">
+                    <img src="/demo/images/expertise/ev-chargers.webp" class="card-img-top" alt="EV Chargers">
+                  </div>
+                  <div class="card-body text-center">
+                    <p class="card-title mb-0">EV Chargers</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col">
+              <a href="#" class="nav-link">
+                <div class="card">
+                  <div class="card-img-container">
+                    <img src="/demo/images/expertise/generators.webp" class="card-img-top" alt="Generators">
+                  </div>
+                  <div class="card-body text-center">
+                    <p class="card-title mb-0">Generators</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col">
+              <a href="#" class="nav-link">
+                <div class="card">
+                  <div class="card-img-container">
+                    <img src="/demo/images/expertise/emergency.webp" class="card-img-top" alt="Emergency Service">
+                  </div>
+                  <div class="card-body text-center">
+                    <p class="card-title mb-0">Emergency</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col">
+              <a href="#" class="nav-link">
+                <div class="card">
+                  <div class="card-img-container">
+                    <img src="/demo/images/expertise/new-construction.webp" class="card-img-top" alt="New Construction">
+                  </div>
+                  <div class="card-body text-center">
+                    <p class="card-title mb-0">New Construction</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col">
+              <a href="#" class="nav-link">
+                <div class="card">
+                  <div class="card-img-container">
+                    <img src="/demo/images/expertise/panel-upgrades.webp" class="card-img-top" alt="Panel Upgrades">
+                  </div>
+                  <div class="card-body text-center">
+                    <p class="card-title mb-0">Panel Upgrades</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══════════════════════════ REVIEWS CAROUSEL ═══════════════════════════ -->
+      <div class="review-sec text-center py-5" id="reviews">
+        <h2 class="mb-2">Our Recent Reviews</h2>
+        <p class="review-sec-sub">What our Northern Michigan customers are saying</p>
+
+        <div class="review-carousel-outer">
+
+          <button class="review-arrow review-prev" id="reviewPrev">&#8249;</button>
+          <button class="review-arrow review-next" id="reviewNext">&#8250;</button>
+
+          <div class="review-track" id="reviewTrack">
+
+            <div class="review-card">
+              <div class="review-header">
+                <div class="avatar" style="background-color:#ea4335;">L</div>
+                <div class="user-info">
+                  <span class="user-name">Linda M.</span>
+                  <span class="review-date">2 weeks ago</span>
+                </div>
+                <img src="https://img.icons8.com/color/48/google-logo.png" class="google-logo" alt="Google">
+              </div>
+              <div class="stars">★★★★★</div>
+              <p class="review-text">Our entire panel needed upgrading. Grace Electric was prompt, professional, and the price was exactly what they quoted. No surprises. Highly recommend!</p>
+            </div>
+
+            <div class="review-card">
+              <div class="review-header">
+                <div class="avatar" style="background-color:#34a853;">M</div>
+                <div class="user-info">
+                  <span class="user-name">Mark R.</span>
+                  <span class="review-date">1 month ago</span>
+                </div>
+                <img src="https://img.icons8.com/color/48/google-logo.png" class="google-logo" alt="Google">
+              </div>
+              <div class="stars">★★★★★</div>
+              <p class="review-text">Had them rewire our entire kitchen remodel. Clean work, passed inspection first try, and the crew was super respectful of our home. Will use again.</p>
+            </div>
+
+            <div class="review-card">
+              <div class="review-header">
+                <div class="avatar" style="background-color:#4285f4;">S</div>
+                <div class="user-info">
+                  <span class="user-name">Sofia C.</span>
+                  <span class="review-date">3 weeks ago</span>
+                </div>
+                <img src="https://img.icons8.com/color/48/google-logo.png" class="google-logo" alt="Google">
+              </div>
+              <div class="stars">★★★★★</div>
+              <p class="review-text">Honest pricing and great communication. They showed up on time and finished ahead of schedule. Our new recessed lighting looks amazing!</p>
+            </div>
+
+            <div class="review-card">
+              <div class="review-header">
+                <div class="avatar" style="background-color:#fbbc05;">D</div>
+                <div class="user-info">
+                  <span class="user-name">David P.</span>
+                  <span class="review-date">2 months ago</span>
+                </div>
+                <img src="https://img.icons8.com/color/48/google-logo.png" class="google-logo" alt="Google">
+              </div>
+              <div class="stars">★★★★★</div>
+              <p class="review-text"><b>Local Guide</b> · Lost power in half our house. They diagnosed the problem in minutes and had everything working again the same day. True pros.</p>
+            </div>
+
+            <div class="review-card">
+              <div class="review-header">
+                <div class="avatar" style="background-color:#7c3aed;">R</div>
+                <div class="user-info">
+                  <span class="user-name">Rachel K.</span>
+                  <span class="review-date">3 months ago</span>
+                </div>
+                <img src="https://img.icons8.com/color/48/google-logo.png" class="google-logo" alt="Google">
+              </div>
+              <div class="stars">★★★★★</div>
+              <p class="review-text">From the estimate to the final walkthrough, everything was seamless. They installed a whole-house surge protector and EV charger. Flawless work.</p>
+            </div>
+
+            <div class="review-card">
+              <div class="review-header">
+                <div class="avatar" style="background-color:#0891b2;">J</div>
+                <div class="user-info">
+                  <span class="user-name">James T.</span>
+                  <span class="review-date">6 weeks ago</span>
+                </div>
+                <img src="https://img.icons8.com/color/48/google-logo.png" class="google-logo" alt="Google">
+              </div>
+              <div class="stars">★★★★★</div>
+              <p class="review-text">Got three quotes and Grace Electric was not only the most competitive but also the most thorough in their walkthrough. Three months later, zero issues.</p>
+            </div>
+
+            <div class="review-card">
+              <div class="review-header">
+                <div class="avatar" style="background-color:#059669;">T</div>
+                <div class="user-info">
+                  <span class="user-name">Teresa N.</span>
+                  <span class="review-date">1 week ago</span>
+                </div>
+                <img src="https://img.icons8.com/color/48/google-logo.png" class="google-logo" alt="Google">
+              </div>
+              <div class="stars">★★★★★</div>
+              <p class="review-text">Emergency call on a Saturday and they still showed up within two hours. Fixed a dangerous short circuit and even tightened a few loose outlets for free.</p>
+            </div>
+
+          </div>
+
+          <div class="review-dots" id="reviewDots"></div>
+
+        </div>
+      </div>
 
       <!-- ═══════════════════════════ MAP ═══════════════════════════ -->
       <div id="map" class="service-map" style="width:100%;height:520px;"></div>
