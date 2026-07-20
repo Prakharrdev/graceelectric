@@ -24,7 +24,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="/demo/css/shared.css" />
-    <link rel="stylesheet" href="/demo/css/home.css" />
     <link rel="stylesheet" href="/demo/css/contact.css" />
 
     <link rel="icon" type="image/x-icon" href="/demo/images/favicon.ico">
@@ -89,6 +88,9 @@
         <i class="bi bi-telephone-fill"></i>
         (231) 944-4519
       </a>
+      <a href="/" class="mobile-topbar-logo-link">
+        <img src="/demo/images/logo-nav.webp" alt="Grace Electric" class="mobile-topbar-logo" />
+      </a>
       <button class="hamburger" id="hamburger" aria-label="Open menu">
         <i id="hamIcon" class="bi bi-list"></i>
       </button>
@@ -98,7 +100,9 @@
 
     <div class="mobile-drawer" id="drawer">
       <div class="drawer-header">
-        <span class="drawer-logo">GRACE ELECTRIC</span>
+        <a href="/" class="drawer-logo-link">
+          <img src="/demo/images/logo-nav.webp" alt="Grace Electric" class="drawer-logo-img" />
+        </a>
         <button class="close-btn" id="closeBtn" aria-label="Close">
           <i class="bi bi-x-lg"></i>
         </button>
@@ -120,7 +124,11 @@
     <!-- Main Nav -->
     <nav class="main-nav">
       <ul>
-        <li class="nav-spacer" aria-hidden="true"></li>
+        <li class="nav-logo">
+          <a href="/" class="nav-logo-link">
+            <img src="/demo/images/logo-nav.webp" alt="Grace Electric" class="nav-logo-img" />
+          </a>
+        </li>
         <li class="nav-links-group">
           <a href="/demo/residential.html" class="nav-btn">Residential</a>
           <a href="#services" class="nav-btn">Commercial</a>
@@ -138,7 +146,7 @@
 
     <main>
 
-<section class="residential-hero" id="home">
+<section class="contact-hero" id="home">
   <div class="container-fluid hero-inner">
     <div class="row align-items-center gx-4">
       
@@ -169,7 +177,7 @@
       <!-- Right Content -->
       <div class="col-lg-7 col-12 order-1 order-lg-2 mb-4 mb-lg-0 mt-4 mt-lg-0">
         <div class="hero-image-wrapper pe-lg-3">
-          <img src="/demo/images/about-img.webp" alt="Grace Electric Office" class="img-fluid residential-hero-img">
+          <img src="/demo/images/about-img.webp" alt="Grace Electric Office" class="img-fluid contact-hero-img">
         </div>
       </div>
 
